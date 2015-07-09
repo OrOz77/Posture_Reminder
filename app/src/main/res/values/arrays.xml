@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="notif_time_entries">
+  <!--      <item>1 minute</item>-->
+        <item>3 minutes</item>
+    <!--    <item>5 minutes</item>-->
+        <item>15 minutes</item>
+        <item>25 minutes</item>
+  <!--      <item>30 minutes</item>-->
+        <item>45 minutes</item>
+        <item>60 minutes</item>
+        <item>90 minutes</item>
+    </string-array>
+
+    <string-array name="notif_time_values">
+<!--        <item>1</item>-->
+        <item>3</item>
+<!--        <item>5</item>-->
+        <item>15</item>
+        <item>25</item>
+<!--        <item>30</item>-->
+        <item>45</item>
+        <item>60</item>
+        <item>90</item>
+    </string-array>
+
+</resources>

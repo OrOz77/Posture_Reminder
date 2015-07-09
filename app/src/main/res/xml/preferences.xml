@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_category_reg"
+        android:title="Notification Options">
+
+    <SwitchPreference
+        android:key="pref_notif_on"
+        android:title="Notification Alerts"
+        android:defaultValue="true">
+
+    </SwitchPreference>
+
+    <ListPreference
+        android:key="pref_notif_times"
+        android:title="Notification Schedule"
+        android:entries="@array/notif_time_entries"
+        android:entryValues="@array/notif_time_values"
+        android:dependency="pref_notif_on"
+        android:defaultValue="15">
+
+    </ListPreference>
+
+    <EditTextPreference
+        android:dependency="pref_notif_on"
+        android:key="pref_notif_main_text"
+        android:title="Notification Title"
+        android:summary="Customize your notification reminder title"
+        android:defaultValue="Fix your posture!">
+    </EditTextPreference>
+
+        <EditTextPreference
+            android:dependency="pref_notif_on"
+            android:key="pref_notif_secondary_text"
+            android:title="Notification Description"
+            android:summary="Customize your notification reminder description"
+            android:defaultValue="Remember to keep your head in a neutral position.">
+        </EditTextPreference>
+        <CheckBoxPreference
+            android:dependency="pref_notif_on"
+            android:key="pref_notif_vibrate"
+            android:title="Vibrate"
+            android:defaultValue="false">
+
+        </CheckBoxPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_category_smart"
+        android:title="Smart Notification Options">
+
+        <SwitchPreference
+            android:key="pref_smartNotif_on"
+            android:title="Smart Notification Alerts"
+            android:summary="Periodically checks device position relative to the ground to calculate head position "
+            android:defaultValue="false">
+        </SwitchPreference>
+
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:key="pref_category_about"
+        android:title="About">
+    <Preference android:title="More Information"
+                android:key="pref_about"/>
+    </PreferenceCategory>
+</PreferenceScreen>
