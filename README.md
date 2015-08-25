@@ -9,5 +9,6 @@ This feature uses Android Alarm Manager to send a custom notification to the use
 2) Sending a "smart alert".
 This features attempts to guess when the user is using improper posture based on data from the accelerometer sensor listener. Approximately every minute, this accelerometer service is started to read the device angle relative to the ground. If the screen is on and the y-axis angle is between 0 and 35 degrees,  it is assumed that the user has his neck tilted downward in order to view the screen. In that case, a notification is sent.
 
-More information available at or-oz.com/posture
+More information available at http://www.or-oz.com/posture/
+
 Download available at https://play.google.com/store/apps/details?id=com.or_oz.posture&hl=en
