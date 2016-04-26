@@ -45,6 +45,13 @@
 
         </CheckBoxPreference>
 
+        <RingtonePreference
+            android:title="Choose Sound"
+            android:key="pref_notif_sound"
+            android:ringtoneType="notification"
+            android:dependency="pref_notif_on">
+        </RingtonePreference>
+
     </PreferenceCategory>
 
     <PreferenceCategory

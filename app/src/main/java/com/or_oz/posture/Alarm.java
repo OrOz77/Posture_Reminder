@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
@@ -16,9 +17,7 @@ import android.widget.Toast;
 
 import java.util.GregorianCalendar;
 
-/**
- * Created by oroz7_000 on 6/22/2015.
- */
+
 public class Alarm {
 
     //sets normal alarm
@@ -93,6 +92,9 @@ public class Alarm {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         String msg = preferences.getString("pref_notif_main_text", "");
         String msgText = preferences.getString("pref_notif_secondary_text", "");
+        String sound = preferences.getString("pref_notif_sound", "");
+
+
 
         // Builds a notification
         NotificationCompat.Builder mBuilder =
@@ -101,9 +103,10 @@ public class Alarm {
                         .setColor(Color.BLUE)
                         .setContentTitle(msg)
                         .setTicker("Posture Reminder")
+                        .setSound(Uri.parse(sound))
                         .setContentText(msgText);
 
-        mBuilder.setDefaults(Notification.DEFAULT_SOUND);
+       // mBuilder.setDefaults(Notification.DEFAULT_SOUND);
         boolean vibrateOn = PreferenceManager.getDefaultSharedPreferences
                 (context).getBoolean("pref_notif_vibrate", false);
 
